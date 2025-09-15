@@ -1,0 +1,10 @@
+﻿@model (string Title, string? ActionText, string? ActionLink)
+
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <h1 class="h3 m-0">@Model.Title</h1>
+    @if (!string.IsNullOrWhiteSpace(Model.ActionText) && !string.IsNullOrWhiteSpace(Model.ActionLink))
+    {
+        <a class="btn btn-primary" href="@Model.ActionLink">@Model.ActionText</a>
+    }
+</div>
+
